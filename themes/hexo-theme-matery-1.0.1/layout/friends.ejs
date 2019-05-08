@@ -172,6 +172,26 @@
     .frind-card10 {
         background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
     }
+    .td-chain {
+        text-align: center
+    }
+    .word-chain {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .div-chain {
+        margin-top: 30px;
+        padding: 20px 20px 20px 20px;
+        border-radius: 10px 10px 10px 10px;
+        display: block;
+        background-color: white;
+    }
+    .table-chain {
+        margin-bottom: 15px
+    }
+    .p-chain {
+        margin: 2px 0 2px 0;
+    }
 </style>
 
 <main class="content">
@@ -205,5 +225,59 @@
             </div>
             <% } %>
         </article>
+        <!-- 以下代码为个人添加 -->
+        <div class="div-chain">
+            <div class="word-chain">
+                欢迎交换友链，请留言告诉我你的：站点名称、站点头像、主页地址、站点简介
+            </div>
+            <table class="table-chain">
+                <tr>
+                    <td class="td-chain">站点名称</td>
+                    <td class="td-chain">站点头像</td>
+                    <td class="td-chain">主页地址</td>
+                    <td class="td-chain">站点简介</td>
+                </tr>
+                <tr>
+                    <td class="td-chain"><a>lu&yan</a></td>
+                    <td class="td-chain"><a href="https://guanayan.github.io/medias/logo.png">https://guanayan.github.io/medias/logo.png</a></td>
+                    <td class="td-chain"><a href="https://guanayan.github.io">https://guanayan.github.io</a></td>
+                    <td class="td-chain"><a>简单爱情❤简单生活</a></td>
+                </tr>
+            </table>
+            <p class="p-chain">
+                ※ 申请友链的站点必须遵循中华人民共和国相关法律法规，凡是违反《互联网信息服务管理办法》或其他法律法规的站点恕不接受友链
+            </p>
+            <p class="p-chain">
+                ※ 请需要友链的同学先添加本站为友链，谢谢！
+            </p>
+            <p class="p-chain">
+                ※ 本站部分图标、图片、源代码来源于互联网，如有侵权请联系我立即删除
+            </p>
+            <p class="p-chain">
+                ※ 本站“特别链接”内容来源于互联网，若不想单方面被添加为友情链接或者有侵权，请网站负责人联系我立即删除
+            </p>
+            <p class="p-chain">
+                ※ 本站不对其他站点任何内容负责
+            </p>
+        </div>
+        <% if (theme.gitalk && theme.gitalk.enable) { %>
+                <%- partial('_partial/gitalk') %>
+            <% } %>
+
+            <% if (theme.gitment.enable) { %>
+                <%- partial('_partial/gitment') %>
+            <% } %>
+
+            <% if (theme.disqus.enable) { %>
+                <%- partial('_partial/disqus') %>
+            <% } %>
+
+            <% if (theme.livere && theme.livere.enable) { %>
+            <%- partial('_partial/livere') %>
+            <% } %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+                <%- partial('_partial/valine') %>
+            <% } %>
     </div>
 </main>

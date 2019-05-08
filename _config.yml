@@ -4,10 +4,10 @@
 
 # Site
 title: lu&yan
-subtitle: 
-description:
-keywords: hexo
-author: yan.zheng
+subtitle: 爱情迷鹿
+description: ❤ 爱情的森林里种了棵树，我在森林里迷了鹿 ❤
+keywords: 爱情迷鹿 爱情 森林 迷鹿
+author: 关阿炎
 language: zh-CN
 timezone:
 
@@ -39,7 +39,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -79,6 +79,29 @@ theme: hexo-theme-matery-1.0.1
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/guanayan/guanayan.github.io.git
-  branch: master
-  
+  repo:
+    github: https://github.com/guanayan/guanayan.github.io.git,master
+    coding: https://git.dev.tencent.com/guanayan/guanayan.git,master
+
+# RSS Subscription Support
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+# Highlight
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: false    # default false
+  custom_css:
+
+# Search
+search:
+  path: search.xml
+  field: post
