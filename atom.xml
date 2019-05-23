@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>lu&amp;yan</title>
+  
+  <subtitle>爱情迷鹿</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://guanayan.github.io/"/>
+  <updated>2019-05-17T01:10:18.441Z</updated>
+  <id>http://guanayan.github.io/</id>
+  
+  <author>
+    <name>关阿炎</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>世界那么大，一起去看看</title>
+    <link href="http://guanayan.github.io/2019/05/15/two/"/>
+    <id>http://guanayan.github.io/2019/05/15/two/</id>
+    <published>2019-05-15T08:38:59.000Z</published>
+    <updated>2019-05-17T01:10:18.441Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;　　人生就是一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情！我们一起走过了很多地方，在每个地方留下的足迹，都记录着我们的爱情。&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="地球环游记" scheme="http://guanayan.github.io/categories/%E5%9C%B0%E7%90%83%E7%8E%AF%E6%B8%B8%E8%AE%B0/"/>
+    
+    
+      <category term="爱情" scheme="http://guanayan.github.io/tags/%E7%88%B1%E6%83%85/"/>
+    
+      <category term="旅程" scheme="http://guanayan.github.io/tags/%E6%97%85%E7%A8%8B/"/>
+    
+      <category term="洛阳" scheme="http://guanayan.github.io/tags/%E6%B4%9B%E9%98%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爱情萌芽</title>
+    <link href="http://guanayan.github.io/2019/04/03/one/"/>
+    <id>http://guanayan.github.io/2019/04/03/one/</id>
+    <published>2019-04-03T03:20:13.000Z</published>
+    <updated>2019-05-15T08:37:42.732Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;　　我们的爱情简简单单，没有那么轰轰烈烈，也没有那么蜿蜒曲折，只是在最好的年华里遇到了最好的彼此，唯愿时光停留于此，镌刻那一幅幅美好。　　　&lt;br&gt;&lt;img src=&quot;https://guanayan.github.io/medias/logo.png&quot;&gt;&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="爱情小事记" scheme="http://guanayan.github.io/categories/%E7%88%B1%E6%83%85%E5%B0%8F%E4%BA%8B%E8%AE%B0/"/>
+    
+    
+      <category term="爱情" scheme="http://guanayan.github.io/tags/%E7%88%B1%E6%83%85/"/>
+    
+      <category term="萌芽" scheme="http://guanayan.github.io/tags/%E8%90%8C%E8%8A%BD/"/>
+    
+  </entry>
+  
+</feed>
