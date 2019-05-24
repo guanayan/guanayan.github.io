@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guanayan.github.io/"/>
-  <updated>2019-05-23T08:08:17.051Z</updated>
+  <updated>2019-05-24T07:30:50.135Z</updated>
   <id>http://guanayan.github.io/</id>
   
   <author>
@@ -17,16 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>three</title>
+    <title>婚纱物语</title>
     <link href="http://guanayan.github.io/2019/05/23/three/"/>
     <id>http://guanayan.github.io/2019/05/23/three/</id>
     <published>2019-05-23T08:08:17.000Z</published>
-    <updated>2019-05-23T08:08:17.051Z</updated>
+    <updated>2019-05-24T07:30:50.135Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="婚纱照" scheme="http://guanayan.github.io/tags/%E5%A9%9A%E7%BA%B1%E7%85%A7/"/>
+    
+      <category term="北龙湖" scheme="http://guanayan.github.io/tags/%E5%8C%97%E9%BE%99%E6%B9%96/"/>
+    
+      <category term="郑州之林" scheme="http://guanayan.github.io/tags/%E9%83%91%E5%B7%9E%E4%B9%8B%E6%9E%97/"/>
     
   </entry>
   
@@ -35,7 +41,7 @@
     <link href="http://guanayan.github.io/2019/05/15/two/"/>
     <id>http://guanayan.github.io/2019/05/15/two/</id>
     <published>2019-05-15T08:38:59.000Z</published>
-    <updated>2019-05-17T01:10:18.441Z</updated>
+    <updated>2019-05-24T08:04:44.807Z</updated>
     
     <summary type="html">
     

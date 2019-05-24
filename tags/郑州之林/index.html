@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="love, 爱情迷鹿 爱情 森林 迷鹿">
-    <meta name="description" content="love | lu&amp;yan">
+    <meta name="keywords" content="标签: 郑州之林, 爱情迷鹿 爱情 森林 迷鹿">
+    <meta name="description" content="标签: 郑州之林 | lu&amp;yan">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>love | lu&amp;yan</title>
+    <title>标签: 郑州之林 | lu&amp;yan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -237,212 +237,147 @@
     </nav>
 </header>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head><meta name="generator" content="Hexo 3.8.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>jQuery+Html5实现唯美表白动画代码</title>
-<link type="text/css" rel="stylesheet" href="/libs/love/default.css">
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="/libs/love/jscex.min.js"></script>
-<script type="text/javascript" src="/libs/love/jscex-parser.js"></script>
-<script type="text/javascript" src="/libs/love/jscex-jit.js"></script>
-<script type="text/javascript" src="/libs/love/jscex-builderbase.min.js"></script>
-<script type="text/javascript" src="/libs/love/jscex-async.min.js"></script>
-<script type="text/javascript" src="/libs/love/jscex-async-powerpack.min.js"></script>
-<script type="text/javascript" src="/libs/love/functions.js" charset="utf-8"></script>
-<script type="text/javascript" src="/libs/love/love.js" charset="utf-8"></script>
-<style type="text/css">
-<!--
-.STYLE1 {
-	color: #666666
-}
--->
-</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body>
-<audio autoplay="autopaly">
-  <source src="/medias/music/banhusha.flac" type="audio/mp3">
-</audio>
-<div id="main">
-  <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
-  <div id="wrap">
-    <div id="text">
-      <div id="code"> <font color="#FF0000"> <span class="say">吾倾慕汝已久</span><br><br>
-        <span class="say"> 愿聘汝为妇</span><br><br>
-        <span class="say"> 托付中馈</span><br><br>
-        <span class="say"> 衍嗣绵延</span><br><br>
-        <span class="say"> 终老一生</span><br><br>
-        <span class="say"> -- 爱你的ZY--</span> </font>
-        <p></p>
-      </div>
+<div class="bg-cover  about-cover" style="background-image: url('/medias/cover.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                <div class="brand">
+                    <div class="title center-align">
+                    
+                        爱情迷鹿
+                    
+                    </div>
+
+                    <div class="description center-align">
+                    
+                        ❤ 爱情的森林里种了棵树，我在森林里迷了鹿 ❤
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
-    <div id="clock-box"> <span class="STYLE1"></span><font color="#33CC00">宝宝，我爱你</font> <span class="STYLE1">已经是……</span>
-      <div id="clock"></div>
-    </div>
-    <canvas id="canvas" width="1100" height="680"></canvas>
-  </div>
 </div>
 
 <script>
-    (function(){
-        var canvas = $('#canvas');
+// Dynamically switch banner pictures every day.
+// $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.random()*10+1) + '.jpg)');
+</script>
 
-        if (!canvas[0].getContext) {
-            $("#error").show();
-            return false;        }
+<main class="content">
 
-        var width = canvas.width();
-        var height = canvas.height();
-        canvas.attr("width", width);
-        canvas.attr("height", height);
-        var opts = {
-            seed: {
-                x: width / 2 - 20,
-                color: "rgb(190, 26, 37)",
-                scale: 2
-            },
-            branch: [
-                [535, 680, 570, 250, 500, 200, 30, 100, [
-                    [540, 500, 455, 417, 340, 400, 13, 100, [
-                        [450, 435, 434, 430, 394, 395, 2, 40]
-                    ]],
-                    [550, 445, 600, 356, 680, 345, 12, 100, [
-                        [578, 400, 648, 409, 661, 426, 3, 80]
-                    ]],
-                    [539, 281, 537, 248, 534, 217, 3, 40],
-                    [546, 397, 413, 247, 328, 244, 9, 80, [
-                        [427, 286, 383, 253, 371, 205, 2, 40],
-                        [498, 345, 435, 315, 395, 330, 4, 60]
-                    ]],
-                    [546, 357, 608, 252, 678, 221, 6, 100, [
-                        [590, 293, 646, 277, 648, 271, 2, 80]
-                    ]]
-                ]]
-            ],
-            bloom: {
-                num: 700,
-                width: 1080,
-                height: 650,
-            },
-            footer: {
-                width: 1200,
-                height: 5,
-                speed: 10,
-            }
-        }
+    
 
-        var tree = new Tree(canvas[0], width, height, opts);
-        var seed = tree.seed;
-        var foot = tree.footer;
-        var hold = 1;
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/爱情/" title="爱情: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="爱情" style="background-color: #F9EBEA;">爱情
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/萌芽/" title="萌芽: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="萌芽" style="background-color: #F5EEF8;">萌芽
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/旅程/" title="旅程: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="旅程" style="background-color: #D5F5E3;">旅程
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/洛阳/" title="洛阳: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="洛阳" style="background-color: #E8F8F5;">洛阳
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/婚纱照/" title="婚纱照: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="婚纱照" style="background-color: #FEF9E7;">婚纱照
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/北龙湖/" title="北龙湖: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="北龙湖" style="background-color: #F8F9F9;">北龙湖
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/郑州之林/" title="郑州之林: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " data-tagname="郑州之林" style="background-color: #82E0AA;">郑州之林
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
 
-        canvas.click(function(e) {
-            var offset = canvas.offset(), x, y;
-            x = e.pageX - offset.left;
-            y = e.pageY - offset.top;
-            if (seed.hover(x, y)) {
-                hold = 0;
-                canvas.unbind("click");
-                canvas.unbind("mousemove");
-                canvas.removeClass('hand');
-            }
-        }).mousemove(function(e){
-            var offset = canvas.offset(), x, y;
-            x = e.pageX - offset.left;
-            y = e.pageY - offset.top;
-            canvas.toggleClass('hand', seed.hover(x, y));
-        });
+    <div class="container">
+        
 
-        var seedAnimate = eval(Jscex.compile("async", function () {
-            seed.draw();
-            while (hold) {
-                $await(Jscex.Async.sleep(10));
-            }
-            while (seed.canScale()) {
-                seed.scale(0.95);
-                $await(Jscex.Async.sleep(10));
-            }
-            while (seed.canMove()) {
-                seed.move(0, 2);
-                foot.draw();
-                $await(Jscex.Async.sleep(10));
-            }
-        }));
+        <article>
+            <div class="row tags-posts">
+                
+                
+                <div class="article tag-post col s12 m6 l4" data-tags="婚纱照, 北龙湖, 郑州之林" data-aos="fade-up">
+                    <div class="card">
+                        <a href="/2019/05/23/three/">
+                            <div class="card-image tag-image">
+                                
+                                
+                                <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="婚纱物语">
+                                
+                                <span class="card-title">婚纱物语</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-23
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fa fa-user fa-fw"></i>
+                                    关阿炎
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+    </div>
+</main>
 
-        var growAnimate = eval(Jscex.compile("async", function () {
-            do {
-    	        tree.grow();
-                $await(Jscex.Async.sleep(10));
-            } while (tree.canGrow());
-        }));
-
-        var flowAnimate = eval(Jscex.compile("async", function () {
-            do {
-    	        tree.flower(2);
-                $await(Jscex.Async.sleep(10));
-            } while (tree.canFlower());
-        }));
-
-        var moveAnimate = eval(Jscex.compile("async", function () {
-            tree.snapshot("p1", 240, 0, 610, 680);
-            while (tree.move("p1", 500, 0)) {
-                foot.draw();
-                $await(Jscex.Async.sleep(10));
-            }
-            foot.draw();
-            tree.snapshot("p2", 500, 0, 610, 680);
-
-            // 会有闪烁不得意这样做, (＞﹏＜)
-            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
-            $await(Jscex.Async.sleep(300));
-            canvas.css("background", "none");
-        }));
-
-        var jumpAnimate = eval(Jscex.compile("async", function () {
-            var ctx = tree.ctx;
-            while (true) {
-                tree.ctx.clearRect(0, 0, width, height);
-                tree.jump();
-                foot.draw();
-                $await(Jscex.Async.sleep(25));
-            }
-        }));
-
-        var textAnimate = eval(Jscex.compile("async", function () {
-		    var together = new Date();
-		    together.setFullYear(2017,2,27); 			//时间年月日
-		    together.setHours(16);						//小时
-		    together.setMinutes(53);					//分钟
-		    together.setSeconds(0);					//秒前一位
-		    together.setMilliseconds(2);				//秒第二位
-
-		    $("#code").show().typewriter();
-            $("#clock-box").fadeIn(500);
-            while (true) {
-                timeElapse(together);
-                $await(Jscex.Async.sleep(1000));
-            }
-        }));
-
-        var runAsync = eval(Jscex.compile("async", function () {
-            $await(seedAnimate());
-            $await(growAnimate());
-            $await(flowAnimate());
-            $await(moveAnimate());
-
-            textAnimate().start();
-
-            $await(jumpAnimate());
-        }));
-
-        runAsync().start();
-    })();
-    </script>
-
-</body>
-</html>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
